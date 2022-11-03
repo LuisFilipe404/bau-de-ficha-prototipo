@@ -1,0 +1,253 @@
+.body {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url(../../assets/dados.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body > div{
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap: 50px;
+}
+
+/*Dado*/
+
+.form {
+    padding: 30px 40px;
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.form > fieldset { 
+    display: flex;
+    flex-direction: column;
+    border: none;
+    align-items: center;
+}
+
+.form > fieldset > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.select {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    width: auto;
+    border: 1px solid #4f4f4f;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 5px 15px;
+    width: 200px;
+    margin: 10px;
+    height: 45px;
+}
+
+.select:focus {
+    outline: none;
+}
+
+.ipt {
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #4f4f4f;
+    height: 45px;
+    width: 100px;
+}
+
+.ipt::-webkit-inner-spin-button { 
+    appearance: none;
+}
+
+.ipt:focus {
+    outline: none;
+}
+
+.btn {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 15px;
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    background-color: #42afde;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #4988a3;
+}
+
+.err,
+.sucess {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.err {
+    color: rgb(231, 3, 3);
+}
+
+.sucess {
+    color: #fff;
+}
+
+/*Aside*/
+
+.historic {
+    height: 60vh;
+    width: 500px;
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow-y: auto;
+    padding: 30px 40px;
+}
+
+.historic h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.historic p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.historic > p > span {
+    color: #ff9c39;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.listHistoric {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 15px;
+    list-style: none;
+}
+
+
+table, th, td {
+    border: 1px solid #fff;
+}
+
+.table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.row {
+    text-align: center;
+}
+
+.row td{
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 5px 0;
+}
+
+.headRow th {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 992px){
+    .body > div {
+        gap: 50px;
+        flex-direction: column;
+    }
+
+    .historic {
+        height: 250px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .body > div {
+        gap: 50px;
+        flex-direction: column;
+    }
+
+    .form {
+        height: auto;
+        width: 300px;
+    }
+
+    /* Dado */
+
+    .form h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Aside */
+    .historic {
+        height: 250px;
+        width: 250px;
+    }
+    
+    .historic h2 {
+        font-size: 1.2rem;
+    }
+
+    .historic p {
+        font-size: 1.1rem;
+    }
+
+    .row td{
+        font-size: 1rem;
+    }
+    
+    .headRow th {
+        font-size: 1.1rem;
+    }
+    
+}
+
+@media screen and (max-height: 763px) and (max-width: 480px) {
+    .form {
+        height: 250px;
+        width: 250px;
+    }
+}

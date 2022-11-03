@@ -1,0 +1,96 @@
+.body {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url(../assets/wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body > div {
+    padding-right: 30%;
+    padding-top: 50px;
+}
+
+.body > div > h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+    font-size: 7.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.body > div > p {
+    color: #fff;
+    font-size: 2rem;
+    width: max(30vw, 800px);
+}
+
+/* Botao */
+
+.btnContainer {
+    margin-top: 40px;
+}
+
+.btn {
+    width: auto;
+    background-color: transparent;
+    color: #ff9c39;
+    border: 4px solid #ff9c39;
+    border-radius:4px;
+    padding: 15px 35px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px #ff9c39) drop-shadow(0 0 50px #ff9c39) contrast(1.5) brightness(1);
+    transition: .5s;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn:hover {
+    color: #fff;
+    transition: .4s ease-in-out;
+    background: #ff9c39;
+    filter: drop-shadow(0 0 2px #ff9c39) drop-shadow(0 0 5px #ff9c39) contrast(1.5) brightness(.9);
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 1262px){
+    .body div {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .body h2,
+    .body p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 836px) {
+    .body > div > h2 {
+        font-size: 5rem;
+    }
+
+    .body > div > p {
+        font-size: 1.2rem;
+        width: auto;
+    }
+}
+
+@media  screen and (max-width: 570px) {
+    .body > div > h2 {
+        font-size: 3rem;
+    }
+
+    .body > div > p {
+        font-size: 1rem;
+    }
+}
